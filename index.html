@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="Page1">
+        <div>
+            <h1>Hello Kiddos</h1>
+            <h2>Welcome to Color Flip</h2>
+        </div>
+        <div>
+            <h1 style="color: aliceblue;">These are the name of basic colors </h1>
+            <h2 style="color: aliceblue;"> Double Click anywhere && Hover mouse to Explore The colors</h2>
+        </div>
+    </div>
+    <div id="colors">
+        <div class="box box1">red
+            <div><audio id="redAudio" controls src="Audios\red-7991.mp3" hidden> </audio></div>
+        </div>
+        <div class="box box2">Orange<div><audio id="orangeAudio" controls src="Audios\orange-7988.mp3" hidden> </audio>
+            </div>
+        </div>
+        <div class="box box3">Yellow<div><audio id="yellowAudio" controls src="Audios\yellow-7993.mp3" hidden> </audio>
+            </div>
+        </div>
+        <div class="box box4">Green<div><audio id="greenAudio" controls src="Audios\green-7987.mp3" hidden> </audio>
+            </div>
+        </div>
+        <div class="box box5">Pink<div><audio id="pinkAudio" controls src="Audios\pink-7989.mp3" hidden> </audio></div>
+        </div>
+        <div class="box box6">Purple<div><audio id="purpleAudio" controls src="Audios\purple-7990.mp3" hidden> </audio>
+            </div>
+        </div>
+        <div class="box box7">Black<div><audio id="blackAudio" controls src="Audios\black-7984.mp3" hidden> </audio>
+            </div>
+        </div>
+        <div class="box box8">White<div><audio id="whiteAudio" controls src="Audios\white-7992.mp3" hidden> </audio>
+            </div>
+        </div>
+        <div class="box box9">Brown<div><audio id="brownAudio" controls src="Audios\brown-7986.mp3" hidden> </audio>
+            </div>
+        </div>
+        <div class="box box10">Blue<div><audio id="blueAudio" controls src="Audios\blue-7985.mp3" hidden> </audio></div>
+        </div>
+    </div>
+    <div id="btn"><button id="Start">Start Game</button></div>
+
+
+    <div id="gameArea" style="display:none; text-align:center; margin-top:40px; font-family: Arial, sans-serif;">
+  <div id="whitebg" style="
+      width: 400px;
+      max-width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 30px;
+      border: 2px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  ">
+    <h2 style="margin-bottom: 20px;">Guess the Color!</h2>
+    <div id="colorBox" style="
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 20px;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        transition: background-color 0.5s;
+    "></div>
+    
+    <input type="text" id="answer" placeholder="Enter color name" style="
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        width: 70%;
+        margin-bottom: 15px;
+        text-align: center;
+    "/>
+    
+    <button id="submitGuess" style="
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 10px;
+        border: none;
+        background-color: #011aff;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    " 
+   >
+      Submit Guess
+    </button>
+    
+    <p id="result" style="margin-top: 20px; font-size: 18px; font-weight: bold;"></p>
+  </div>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

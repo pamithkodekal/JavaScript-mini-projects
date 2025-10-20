@@ -1,0 +1,121 @@
+body {
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    /* Ensure no horizontal scroll bar on small screens */
+    overflow-x: hidden; 
+}
+
+#Page1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+    text-shadow: 3px 3px 6px #2A7B9B;
+    animation: sizePulse 2s infinite;
+    /* 2s duration, infinite repeats */
+    padding: 20px; /* Add padding for small screens */
+}
+
+/* Base styles for the color containers */
+#colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Use a max-width to center and control size on very large screens */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 10px; /* Add some padding around the grid */
+}
+
+
+.box {
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: clamp(16px, 4vw, 28px); /* Responsive font size */
+    width: 15%; /* Default: about 6 items per row (6 * 15% = 90% + margin) */
+    height: 10vh; /* Use viewport height for a consistent height */
+    margin: 1%; /* Small margin for spacing */
+    text-align: center;
+    padding: 1%;
+    box-sizing: border-box;
+    background-color: rgba(240, 248, 255, 0.701);
+    /* Set text color to black by default for visibility */
+    color: black; 
+    display: flex; /* Flexbox for centering content */
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Hover effects */
+.box1:hover { background-color: red; }
+.box2:hover { background-color: orange; }
+.box3:hover { background-color: yellow; }
+.box4:hover { background-color: green; }
+.box5:hover { background-color: pink; }
+.box6:hover { background-color: purple; }
+.box7:hover { background-color: black; color: white; }
+.box8:hover { background-color: white; }
+.box9:hover { background-color: brown; }
+.box10:hover { background-color: rgb(0, 8, 255); }
+
+/* Keyframe for Page1 animation */
+@keyframes sizePulse {
+    0%,
+    100% { font-size: 15px; }
+    50% { font-size: 17px; }
+}
+
+/* Styling for the Start Button */
+#Start {
+    background-color: #6e07ff76;
+    color: black;
+    font-size: clamp(20px, 5vw, 28px); /* Responsive font size */
+    border-radius: 20px;
+    width: clamp(150px, 30%, 300px); /* Responsive width */
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#Start:hover {
+    background-color: #6e07ff;
+}
+
+#btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* --- Media Queries for Layout Adjustments --- */
+
+/* Tablet layout (e.g., 768px and down) - Show 4 boxes per row */
+@media (max-width: 768px) {
+    .box {
+        width: 23%; /* ~4 boxes per row (4 * 23% = 92% + margin) */
+        height: 8vh;
+        font-size: clamp(14px, 3vw, 24px);
+    }
+}
+
+/* Mobile layout (e.g., 480px and down) - Show 2 boxes per row */
+@media (max-width: 480px) {
+    .box {
+        width: 45%; /* ~2 boxes per row (2 * 45% = 90% + margin) */
+        height: 8vh;
+        margin: 2%; 
+        font-size: clamp(12px, 5vw, 20px);
+    }
+
+    #Page1 h1, #Page1 h2 {
+        font-size: clamp(1.2rem, 5vw, 2rem); /* Make page headers smaller */
+    }
+}
