@@ -14,7 +14,7 @@ answerInput.style= "padding : 20px; font-size: 24px; border-radius:40px";
 
 resultText.style="color:green; font-size:24px;";
 
-const colors = ['red', 'orange', 'yellow', 'green', 'pink', 'purple', 'black', 'white', 'brown', 'bluee'];
+const colors = ['red', 'orange', 'yellow', 'green', 'pink', 'purple', 'black', 'white', 'brown', 'blue'];
 let Index = 0;
 
 // When Start Button is clicked
